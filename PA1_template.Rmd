@@ -142,7 +142,7 @@ Total_Steps[, .(Mean_Steps = mean(steps), Median_Steps = median(steps))]
 ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1000) + labs(title = "Daily Steps", x = "Steps", y = "Frequency")
 ```
 
-![](missingvalhist.png)
+![](https://github.com/shrustisuvarna156/RepData_PeerAssessment1/blob/master/missingvalhist.png)
 
 | Type of Estimate                       | Mean\_Steps | Median\_Steps |
 |----------------------------------------|-------------|---------------|
@@ -186,4 +186,4 @@ IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("step
 ggplot(IntervalDT , aes(x = interval , y = steps, color=`weekday or weekend`)) + geom_line() + labs(title = "Avg. Daily Steps by Weektype", x = "Interval", y = "No. of Steps") + facet_wrap(~`weekday or weekend` , ncol = 1, nrow=2)
 ```
 
-![](panelplot.png)
+![](https://github.com/shrustisuvarna156/RepData_PeerAssessment1/blob/master/panelplot.png)
