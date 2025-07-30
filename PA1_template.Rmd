@@ -23,18 +23,6 @@ steps: Number of steps taking in a 5-minute interval (missing values are coded a
 
 Loading and preprocessing the data
 ----------------------------------
-
-Unzip data to obtain a csv file.
-
-``` r
-library("data.table")
-library(ggplot2)
-
-fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
-download.file(fileUrl, destfile = paste0(getwd(), '/repdata%2Fdata%2Factivity.zip'), method = "curl")
-unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
-```
-
 Reading csv Data into Data.Table.
 ---------------------------------
 
@@ -72,8 +60,6 @@ ggplot(Total_Steps, aes(x = steps)) +
     geom_histogram(fill = "blue", binwidth = 1000) +
     labs(title = "Daily Steps", x = "Steps", y = "Frequency")
 ```
-
-    ## Warning: Removed 8 rows containing non-finite values (stat_bin).
 
 ![](https://github.com/mGalarnyk/datasciencecoursera/blob/master/5_Reproducible_Research/project1/%F0%9D%99%BF%F0%9D%99%B0%F0%9D%9F%B7_%F0%9D%9A%9D%F0%9D%9A%8E%F0%9D%9A%96%F0%9D%9A%99%F0%9D%9A%95%F0%9D%9A%8A%F0%9D%9A%9D%F0%9D%9A%8E_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
